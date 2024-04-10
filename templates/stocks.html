@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+    <style>
+        img {
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4); 
+            transition: box-shadow 0.3s ease-in-out; 
+        }
+
+        img:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); 
+            transform: scale(1.05); 
+        }
+    </style>
+</head>
+<body>
+    <u><h1>Stock Information</h1>
+    <br><br>
+    <h2>Average Stock Prices By Year:</h2>
+    <img src="{{ url_for('static', filename='prices.png') }}" alt="Matplotlib Plot">
+    <br>
+    <br>
+    <br>
+    <h2>Top 10 Most Traded Companies by Volume:</h2>
+    <img src="{{ url_for('static', filename='volume.png') }}" alt="Matplotlib Plot">
+    <br>
+    <br>
+    <br>
+    <h2>Changes in Opening, High, Low, and Closing Prices Over the Years:</h2>
+ 
+    <img src="{{ url_for('static', filename='stacked.png') }}" alt="Matplotlib Plot">
+</body>
+</html>
